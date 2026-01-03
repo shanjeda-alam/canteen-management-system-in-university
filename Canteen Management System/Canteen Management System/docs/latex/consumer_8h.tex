@@ -1,0 +1,185 @@
+\doxysection{include/consumer.h File Reference}
+\hypertarget{consumer_8h}{}\label{consumer_8h}\index{include/consumer.h@{include/consumer.h}}
+
+
+Declarations for \doxylink{struct_consumer}{Consumer} management using a doubly linked list.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_consumer}{Consumer}}
+\begin{DoxyCompactList}\small\item\em Represents a consumer node in a doubly linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{consumer_8h_a3c100f3bbb6999c5d8c3d0377cbffd7d}\label{consumer_8h_a3c100f3bbb6999c5d8c3d0377cbffd7d} 
+typedef struct Consumer {\bfseries Consumer}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}} \{ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a65e90109a047c6f58260395f659cd41b}{STUDENT}}
+, \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a50584ac52e781ef7c739edea1f1d5ca2}{STAFF}}
+, \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a43c9f6a1763ba7bd626343d40a6c6a7d}{FACULTY}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the type/category of a consumer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{consumer_8h_a9ec1b16fc84400f2f7e32e5f2feb5199}{create\+Consumer}} (const char \texorpdfstring{$\ast$}{*}uid, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Creates a new \doxylink{struct_consumer}{Consumer} node. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{consumer_8h_ad38e99ed1eb60e95e2ba5e2c4d072499}{add\+Consumer}} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}uid, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Adds a new consumer to the beginning of the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{consumer_8h_ac218a5353fd862f75a6b06caae330eae}{display\+Consumers}} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Displays all consumers in the list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{consumer_8h_a3019b3ce6db01ef1b2ac6d3252d84437}{edit\+Consumer}} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}uid, const char \texorpdfstring{$\ast$}{*}new\+Name, \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}} new\+Type)
+\begin{DoxyCompactList}\small\item\em Edits an existing consumer\textquotesingle{}s details. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{consumer_8h_a90cc83162635e632455656251d8c5b3d}{free\+Consumers}} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Frees all consumers in the list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Declarations for \doxylink{struct_consumer}{Consumer} management using a doubly linked list. 
+
+This header file contains the data structures and function prototypes required to create, manage, modify, display, and free \doxylink{struct_consumer}{Consumer} records. 
+
+\label{doc-enum-members}
+\Hypertarget{consumer_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}\index{consumer.h@{consumer.h}!ConsumerType@{ConsumerType}}
+\index{ConsumerType@{ConsumerType}!consumer.h@{consumer.h}}
+\doxysubsubsection{\texorpdfstring{ConsumerType}{ConsumerType}}
+{\footnotesize\ttfamily \label{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43} 
+enum \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}}}
+
+
+
+Represents the type/category of a consumer. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STUDENT@{STUDENT}!consumer.h@{consumer.h}}\index{consumer.h@{consumer.h}!STUDENT@{STUDENT}}}\Hypertarget{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a65e90109a047c6f58260395f659cd41b}\label{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a65e90109a047c6f58260395f659cd41b} 
+STUDENT&\doxylink{struct_consumer}{Consumer} is a student \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STAFF@{STAFF}!consumer.h@{consumer.h}}\index{consumer.h@{consumer.h}!STAFF@{STAFF}}}\Hypertarget{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a50584ac52e781ef7c739edea1f1d5ca2}\label{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a50584ac52e781ef7c739edea1f1d5ca2} 
+STAFF&\doxylink{struct_consumer}{Consumer} is a staff member \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FACULTY@{FACULTY}!consumer.h@{consumer.h}}\index{consumer.h@{consumer.h}!FACULTY@{FACULTY}}}\Hypertarget{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a43c9f6a1763ba7bd626343d40a6c6a7d}\label{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a43c9f6a1763ba7bd626343d40a6c6a7d} 
+FACULTY&\doxylink{struct_consumer}{Consumer} is a faculty member \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{consumer_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{consumer_8h_ad38e99ed1eb60e95e2ba5e2c4d072499}\index{consumer.h@{consumer.h}!addConsumer@{addConsumer}}
+\index{addConsumer@{addConsumer}!consumer.h@{consumer.h}}
+\doxysubsubsection{\texorpdfstring{addConsumer()}{addConsumer()}}
+{\footnotesize\ttfamily \label{consumer_8h_ad38e99ed1eb60e95e2ba5e2c4d072499} 
+void add\+Consumer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{head}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uid}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new consumer to the beginning of the list. 
+
+Inserts the newly created consumer node at the head of the doubly linked list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head pointer of the consumer list. \\
+\hline
+{\em uid} & Unique identifier of the consumer. \\
+\hline
+{\em name} & Name of the consumer. \\
+\hline
+{\em type} & Type of the consumer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{consumer_8h_a9ec1b16fc84400f2f7e32e5f2feb5199}\index{consumer.h@{consumer.h}!createConsumer@{createConsumer}}
+\index{createConsumer@{createConsumer}!consumer.h@{consumer.h}}
+\doxysubsubsection{\texorpdfstring{createConsumer()}{createConsumer()}}
+{\footnotesize\ttfamily \label{consumer_8h_a9ec1b16fc84400f2f7e32e5f2feb5199} 
+\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*} create\+Consumer (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{uid}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}}}]{type}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new \doxylink{struct_consumer}{Consumer} node. 
+
+Allocates memory for a \doxylink{struct_consumer}{Consumer} structure and initializes its fields.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & Unique identifier of the consumer. \\
+\hline
+{\em name} & Name of the consumer. \\
+\hline
+{\em type} & Type of the consumer.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{struct_consumer}{Consumer}. 
+\end{DoxyReturn}
+\Hypertarget{consumer_8h_ac218a5353fd862f75a6b06caae330eae}\index{consumer.h@{consumer.h}!displayConsumers@{displayConsumers}}
+\index{displayConsumers@{displayConsumers}!consumer.h@{consumer.h}}
+\doxysubsubsection{\texorpdfstring{displayConsumers()}{displayConsumers()}}
+{\footnotesize\ttfamily \label{consumer_8h_ac218a5353fd862f75a6b06caae330eae} 
+void display\+Consumers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Displays all consumers in the list. 
+
+Traverses the consumer list from head to tail and prints the details of each consumer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the consumer list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{consumer_8h_a3019b3ce6db01ef1b2ac6d3252d84437}\index{consumer.h@{consumer.h}!editConsumer@{editConsumer}}
+\index{editConsumer@{editConsumer}!consumer.h@{consumer.h}}
+\doxysubsubsection{\texorpdfstring{editConsumer()}{editConsumer()}}
+{\footnotesize\ttfamily \label{consumer_8h_a3019b3ce6db01ef1b2ac6d3252d84437} 
+void edit\+Consumer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uid}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{new\+Name}{, }\item[{\mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{Consumer\+Type}}}]{new\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Edits an existing consumer\textquotesingle{}s details. 
+
+Searches for a consumer by UID and updates its name and type.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the consumer list. \\
+\hline
+{\em uid} & Unique identifier of the consumer to be edited. \\
+\hline
+{\em new\+Name} & New name for the consumer. \\
+\hline
+{\em new\+Type} & New type for the consumer. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{consumer_8h_a90cc83162635e632455656251d8c5b3d}\index{consumer.h@{consumer.h}!freeConsumers@{freeConsumers}}
+\index{freeConsumers@{freeConsumers}!consumer.h@{consumer.h}}
+\doxysubsubsection{\texorpdfstring{freeConsumers()}{freeConsumers()}}
+{\footnotesize\ttfamily \label{consumer_8h_a90cc83162635e632455656251d8c5b3d} 
+void free\+Consumers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Frees all consumers in the list. 
+
+Deallocates memory for all consumer nodes and their associated data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the consumer list. \\
+\hline
+\end{DoxyParams}

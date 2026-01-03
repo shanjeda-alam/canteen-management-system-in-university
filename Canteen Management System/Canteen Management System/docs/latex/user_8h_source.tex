@@ -1,0 +1,56 @@
+\doxysection{user.\+h}
+\hypertarget{user_8h_source}{}\label{user_8h_source}\index{include/user.h@{include/user.h}}
+\mbox{\hyperlink{user_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ USER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ USER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ User\ Role}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a3228e792244f936584abc6e3d7542d2c}{ADMIN}},\ \ \ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a966591b4b4e1813c66e94b115877dc3d}{MANAGER}},\ \ \ }
+\DoxyCodeLine{00026\ \ \ \ \ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951aac87e50c9deed5af3966a133a65ea6ef}{CASHIER}}\ \ \ \ }
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00030\ \textcolor{comment}{\ \ \ User\ Node\ (linked\ list)}}
+\DoxyCodeLine{00031\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_user}{User}}\ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_a09ffede2e8f9205b5050fa922f9a547e}{uid}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_a829fa9c7710707548005c76f41340d77}{name}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aa5a1a545c2690cf801b6624596ce6cf4}{username}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aae9d564fe8553342510c0b7b79edb360}{password}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}}\ \mbox{\hyperlink{struct_user_af969eefd9642fee961f35493965e274c}{role}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_user}{User}}\ *\mbox{\hyperlink{struct_user_ae83adce10c90cd821090c855f2c46369}{next}};\ \ \ \ }
+\DoxyCodeLine{00047\ \}\ \mbox{\hyperlink{struct_user}{User}};}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ \ \ Function\ Declarations}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00067\ \mbox{\hyperlink{struct_user}{User}}*\ \mbox{\hyperlink{user_8h_aee64e8e924e46b9138e54845f58927ed}{createUser}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_a09ffede2e8f9205b5050fa922f9a547e}{uid}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_a829fa9c7710707548005c76f41340d77}{name}},}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aa5a1a545c2690cf801b6624596ce6cf4}{username}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aae9d564fe8553342510c0b7b79edb360}{password}},\ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}}\ \mbox{\hyperlink{struct_user_af969eefd9642fee961f35493965e274c}{role}});}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_8h_ac07bf75f0de0b9cb6d72c7b309b90d44}{addUser}}(\mbox{\hyperlink{struct_user}{User}}\ **head,\ \mbox{\hyperlink{struct_user}{User}}\ *user);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00090\ \mbox{\hyperlink{struct_user}{User}}*\ \mbox{\hyperlink{user_8h_a5a1a54e9a1171aab72b36538782f9d77}{findUserByUsername}}(\mbox{\hyperlink{struct_user}{User}}\ *head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aa5a1a545c2690cf801b6624596ce6cf4}{username}});}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00103\ \mbox{\hyperlink{struct_user}{User}}*\ \mbox{\hyperlink{user_8h_ab96e69bf7665bb7a8b904eadc37ae7a4}{login}}(\mbox{\hyperlink{struct_user}{User}}\ *head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aa5a1a545c2690cf801b6624596ce6cf4}{username}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_aae9d564fe8553342510c0b7b79edb360}{password}});}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_8h_a486adc3c36e999826ef3c0e109e40da9}{displayUsers}}(\mbox{\hyperlink{struct_user}{User}}\ *head);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00128\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_8h_a63185a69424790692aa6830a221d676b}{editUser}}(\mbox{\hyperlink{struct_user}{User}}\ *head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_user_a09ffede2e8f9205b5050fa922f9a547e}{uid}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *newName,}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *newUsername,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *newPassword,\ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}}\ newRole);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00139\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{user_8h_ad1be486db5d66460e486117a29dd27e5}{freeUsers}}(\mbox{\hyperlink{struct_user}{User}}\ *head);}
+\DoxyCodeLine{00140\ }
+\DoxyCodeLine{00141\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ USER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

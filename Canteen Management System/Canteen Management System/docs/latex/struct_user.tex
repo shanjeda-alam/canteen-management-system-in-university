@@ -1,0 +1,77 @@
+\doxysection{User Struct Reference}
+\hypertarget{struct_user}{}\label{struct_user}\index{User@{User}}
+
+
+Represents a system user.  
+
+
+
+
+{\ttfamily \#include $<$user.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_user_a09ffede2e8f9205b5050fa922f9a547e}{uid}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_user_a829fa9c7710707548005c76f41340d77}{name}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_user_aa5a1a545c2690cf801b6624596ce6cf4}{username}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_user_aae9d564fe8553342510c0b7b79edb360}{password}}
+\item 
+\mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}} \mbox{\hyperlink{struct_user_af969eefd9642fee961f35493965e274c}{role}}
+\item 
+struct \mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_user_ae83adce10c90cd821090c855f2c46369}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a system user. 
+
+Stores user identification, login credentials, role information, and linkage for a singly linked list. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_user_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_user_a829fa9c7710707548005c76f41340d77}\index{User@{User}!name@{name}}
+\index{name@{name}!User@{User}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{struct_user_a829fa9c7710707548005c76f41340d77} 
+char\texorpdfstring{$\ast$}{*} User\+::name}
+
+Full name of the user \Hypertarget{struct_user_ae83adce10c90cd821090c855f2c46369}\index{User@{User}!next@{next}}
+\index{next@{next}!User@{User}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{struct_user_ae83adce10c90cd821090c855f2c46369} 
+struct \mbox{\hyperlink{struct_user}{User}}\texorpdfstring{$\ast$}{*} User\+::next}
+
+Pointer to the next user \Hypertarget{struct_user_aae9d564fe8553342510c0b7b79edb360}\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily \label{struct_user_aae9d564fe8553342510c0b7b79edb360} 
+char\texorpdfstring{$\ast$}{*} User\+::password}
+
+Login password \Hypertarget{struct_user_af969eefd9642fee961f35493965e274c}\index{User@{User}!role@{role}}
+\index{role@{role}!User@{User}}
+\doxysubsubsection{\texorpdfstring{role}{role}}
+{\footnotesize\ttfamily \label{struct_user_af969eefd9642fee961f35493965e274c} 
+\mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}} User\+::role}
+
+\doxylink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role} of the user \Hypertarget{struct_user_a09ffede2e8f9205b5050fa922f9a547e}\index{User@{User}!uid@{uid}}
+\index{uid@{uid}!User@{User}}
+\doxysubsubsection{\texorpdfstring{uid}{uid}}
+{\footnotesize\ttfamily \label{struct_user_a09ffede2e8f9205b5050fa922f9a547e} 
+char\texorpdfstring{$\ast$}{*} User\+::uid}
+
+\doxylink{struct_user}{User} ID (dynamically allocated) \Hypertarget{struct_user_aa5a1a545c2690cf801b6624596ce6cf4}\index{User@{User}!username@{username}}
+\index{username@{username}!User@{User}}
+\doxysubsubsection{\texorpdfstring{username}{username}}
+{\footnotesize\ttfamily \label{struct_user_aa5a1a545c2690cf801b6624596ce6cf4} 
+char\texorpdfstring{$\ast$}{*} User\+::username}
+
+Login username 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{user_8h}{user.\+h}}\end{DoxyCompactItemize}

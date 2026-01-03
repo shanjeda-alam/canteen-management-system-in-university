@@ -1,0 +1,53 @@
+\doxysection{Order\+Queue Struct Reference}
+\hypertarget{struct_order_queue}{}\label{struct_order_queue}\index{OrderQueue@{OrderQueue}}
+
+
+FIFO queue for managing orders.  
+
+
+
+
+{\ttfamily \#include $<$order.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_queue_adacdae8dd1fbf63d6528a3d7de807fcf}{front}}
+\item 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_queue_aefe230376d54b0aa72059450a1ca6b19}{rear}}
+\item 
+int \mbox{\hyperlink{struct_order_queue_a6f1ad2313e1ade1470a18424bf3cea58}{count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+FIFO queue for managing orders. 
+
+Orders are processed in the order they are placed. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_order_queue_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_order_queue_a6f1ad2313e1ade1470a18424bf3cea58}\index{OrderQueue@{OrderQueue}!count@{count}}
+\index{count@{count}!OrderQueue@{OrderQueue}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{struct_order_queue_a6f1ad2313e1ade1470a18424bf3cea58} 
+int Order\+Queue\+::count}
+
+Number of orders in the queue \Hypertarget{struct_order_queue_adacdae8dd1fbf63d6528a3d7de807fcf}\index{OrderQueue@{OrderQueue}!front@{front}}
+\index{front@{front}!OrderQueue@{OrderQueue}}
+\doxysubsubsection{\texorpdfstring{front}{front}}
+{\footnotesize\ttfamily \label{struct_order_queue_adacdae8dd1fbf63d6528a3d7de807fcf} 
+\mbox{\hyperlink{struct_order}{Order}}\texorpdfstring{$\ast$}{*} Order\+Queue\+::front}
+
+Pointer to the front of the queue \Hypertarget{struct_order_queue_aefe230376d54b0aa72059450a1ca6b19}\index{OrderQueue@{OrderQueue}!rear@{rear}}
+\index{rear@{rear}!OrderQueue@{OrderQueue}}
+\doxysubsubsection{\texorpdfstring{rear}{rear}}
+{\footnotesize\ttfamily \label{struct_order_queue_aefe230376d54b0aa72059450a1ca6b19} 
+\mbox{\hyperlink{struct_order}{Order}}\texorpdfstring{$\ast$}{*} Order\+Queue\+::rear}
+
+Pointer to the rear of the queue 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{order_8h}{order.\+h}}\end{DoxyCompactItemize}

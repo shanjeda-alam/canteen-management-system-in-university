@@ -1,0 +1,62 @@
+\doxysection{menuitem.\+h}
+\hypertarget{menuitem_8h_source}{}\label{menuitem_8h_source}\index{include/menuitem.h@{include/menuitem.h}}
+\mbox{\hyperlink{menuitem_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MENUITEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MENUITEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66babaad2be1abe0cffbc3a0bbf032a604c4}{FOOD}},\ \ \ \ }
+\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66ba5e57ca764a26bb8b8a9126551a4ec847}{DRINK}},\ \ \ }
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66ba0ca6a521202910292a69e7aa7cec009a}{DESERT}}\ \ \ }
+\DoxyCodeLine{00026\ \}\ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{ItemType}};}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00035\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_menu}{Menu}}\ \{}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_menu_aac3b853a64aca7ef6e70fceae8c126be}{id}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_menu_a0da441d69a6621777a2b755d61cf1dc4}{name}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{ItemType}}\ \mbox{\hyperlink{struct_menu_a51304cedbcfe37c1da40ea36e9a257ed}{type}};\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_menu_a108d468ba088144d3767cc0538d69f64}{price}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00040\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_menu_a26a1be315d55491a7766a57290080a5e}{quantity}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_menu}{Menu}}\ *\mbox{\hyperlink{struct_menu_ad3ae1b10375ce4cd3ead2b89b63d22b7}{prev}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_menu}{Menu}}\ *\mbox{\hyperlink{struct_menu_a46a1863f7a559b9f39497f401a8a70ec}{next}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00043\ \}\ \mbox{\hyperlink{struct_menu}{Menu}};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ Menu\ item\ creation\ and\ insertion}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00063\ \mbox{\hyperlink{struct_menu}{Menu}}*\ \mbox{\hyperlink{menuitem_8h_a77369dfb499950311f15f429fba6af6a}{createMenuItem}}(\textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_menu_a0da441d69a6621777a2b755d61cf1dc4}{name}},\ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{ItemType}}\ \mbox{\hyperlink{struct_menu_a51304cedbcfe37c1da40ea36e9a257ed}{type}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_menu_a108d468ba088144d3767cc0538d69f64}{price}},\ uint16\_t\ \mbox{\hyperlink{struct_menu_a26a1be315d55491a7766a57290080a5e}{quantity}});}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menuitem_8h_a843835393327026a37de3071c9cc5d29}{addMenuItem}}(\mbox{\hyperlink{struct_menu}{Menu}}\ **head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_menu_a0da441d69a6621777a2b755d61cf1dc4}{name}},\ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{ItemType}}\ \mbox{\hyperlink{struct_menu_a51304cedbcfe37c1da40ea36e9a257ed}{type}},\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_menu_a108d468ba088144d3767cc0538d69f64}{price}},\ uint16\_t\ \mbox{\hyperlink{struct_menu_a26a1be315d55491a7766a57290080a5e}{quantity}});}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00080\ \textcolor{comment}{\ \ \ Menu\ item\ search\ and\ display}}
+\DoxyCodeLine{00081\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00093\ \mbox{\hyperlink{struct_menu}{Menu}}*\ \mbox{\hyperlink{menuitem_8h_a207afe0692ab3d12e08fa6a418d947da}{findMenuItem}}(\mbox{\hyperlink{struct_menu}{Menu}}\ *head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id});}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00103\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menuitem_8h_a1dbd16370337fa8806c3efac1d0893e7}{displayMenu}}(\mbox{\hyperlink{struct_menu}{Menu}}\ *head);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00106\ \textcolor{comment}{\ \ \ Menu\ item\ modification}}
+\DoxyCodeLine{00107\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menuitem_8h_a0c932a669b40f9042433a438da39da44}{editMenuItem}}(\mbox{\hyperlink{struct_menu}{Menu}}\ *head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *newName,\ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{ItemType}}\ newType,\ \textcolor{keywordtype}{float}\ newPrice);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00132\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menuitem_8h_adaf523c6af4257346fbcdee8f82c470c}{updateQuantity}}(\mbox{\hyperlink{struct_menu}{Menu}}\ *head,\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ change);}
+\DoxyCodeLine{00133\ }
+\DoxyCodeLine{00134\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00135\ \textcolor{comment}{\ \ \ Memory\ cleanup}}
+\DoxyCodeLine{00136\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00137\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menuitem_8h_a9f8a5da263d96b323c00d70a0edcbd09}{freeMenu}}(\mbox{\hyperlink{struct_menu}{Menu}}\ *head);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00147\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ MENUITEM\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

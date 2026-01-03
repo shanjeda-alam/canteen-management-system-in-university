@@ -1,0 +1,85 @@
+\doxysection{Order Struct Reference}
+\hypertarget{struct_order}{}\label{struct_order}\index{Order@{Order}}
+
+
+Represents a customer order.  
+
+
+
+
+{\ttfamily \#include $<$order.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_order_a3f5f823e027c7e045f6960a66524334e}{order\+Id}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_a9d45d76a233d199a527946b2a876daff}{consumer\+Name}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_a2d5c65bdf2d29006b3ac1a4e5846ab36}{consumer\+UID}}
+\item 
+\mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_aee1149917110e90b12357543fabdad35}{items}}
+\item 
+float \mbox{\hyperlink{struct_order_a6ddc3e3543ffae7530aeb4d9ee0048ef}{total\+Amount}}
+\item 
+time\+\_\+t \mbox{\hyperlink{struct_order_a9ab6bfabe85626c34cd054d320007940}{order\+Time}}
+\item 
+struct \mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_af630b0441309050732b69d4dc82f3ff0}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a customer order. 
+
+Stores consumer information, ordered items, billing details, timestamp, and linkage for queue management. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_order_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_order_a9d45d76a233d199a527946b2a876daff}\index{Order@{Order}!consumerName@{consumerName}}
+\index{consumerName@{consumerName}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{consumerName}{consumerName}}
+{\footnotesize\ttfamily \label{struct_order_a9d45d76a233d199a527946b2a876daff} 
+char\texorpdfstring{$\ast$}{*} Order\+::consumer\+Name}
+
+\doxylink{struct_consumer}{Consumer} name (dynamically allocated) \Hypertarget{struct_order_a2d5c65bdf2d29006b3ac1a4e5846ab36}\index{Order@{Order}!consumerUID@{consumerUID}}
+\index{consumerUID@{consumerUID}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{consumerUID}{consumerUID}}
+{\footnotesize\ttfamily \label{struct_order_a2d5c65bdf2d29006b3ac1a4e5846ab36} 
+char\texorpdfstring{$\ast$}{*} Order\+::consumer\+UID}
+
+\doxylink{struct_consumer}{Consumer} UID (dynamically allocated) \Hypertarget{struct_order_aee1149917110e90b12357543fabdad35}\index{Order@{Order}!items@{items}}
+\index{items@{items}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{items}{items}}
+{\footnotesize\ttfamily \label{struct_order_aee1149917110e90b12357543fabdad35} 
+\mbox{\hyperlink{struct_order_item}{Order\+Item}}\texorpdfstring{$\ast$}{*} Order\+::items}
+
+Linked list of order items \Hypertarget{struct_order_af630b0441309050732b69d4dc82f3ff0}\index{Order@{Order}!next@{next}}
+\index{next@{next}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{struct_order_af630b0441309050732b69d4dc82f3ff0} 
+struct \mbox{\hyperlink{struct_order}{Order}}\texorpdfstring{$\ast$}{*} Order\+::next}
+
+Pointer to the next order in queue \Hypertarget{struct_order_a3f5f823e027c7e045f6960a66524334e}\index{Order@{Order}!orderId@{orderId}}
+\index{orderId@{orderId}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{orderId}{orderId}}
+{\footnotesize\ttfamily \label{struct_order_a3f5f823e027c7e045f6960a66524334e} 
+uint16\+\_\+t Order\+::order\+Id}
+
+Unique order ID \Hypertarget{struct_order_a9ab6bfabe85626c34cd054d320007940}\index{Order@{Order}!orderTime@{orderTime}}
+\index{orderTime@{orderTime}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{orderTime}{orderTime}}
+{\footnotesize\ttfamily \label{struct_order_a9ab6bfabe85626c34cd054d320007940} 
+time\+\_\+t Order\+::order\+Time}
+
+\doxylink{struct_order}{Order} timestamp \Hypertarget{struct_order_a6ddc3e3543ffae7530aeb4d9ee0048ef}\index{Order@{Order}!totalAmount@{totalAmount}}
+\index{totalAmount@{totalAmount}!Order@{Order}}
+\doxysubsubsection{\texorpdfstring{totalAmount}{totalAmount}}
+{\footnotesize\ttfamily \label{struct_order_a6ddc3e3543ffae7530aeb4d9ee0048ef} 
+float Order\+::total\+Amount}
+
+Total order amount 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{order_8h}{order.\+h}}\end{DoxyCompactItemize}

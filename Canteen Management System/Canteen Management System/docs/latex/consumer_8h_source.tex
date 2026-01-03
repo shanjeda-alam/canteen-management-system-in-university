@@ -1,0 +1,39 @@
+\doxysection{consumer.\+h}
+\hypertarget{consumer_8h_source}{}\label{consumer_8h_source}\index{include/consumer.h@{include/consumer.h}}
+\mbox{\hyperlink{consumer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONSUMER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONSUMER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <stdio.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdlib.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string.h>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{enum}\ \{}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a65e90109a047c6f58260395f659cd41b}{STUDENT}},\ \ \ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a50584ac52e781ef7c739edea1f1d5ca2}{STAFF}},\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43a43c9f6a1763ba7bd626343d40a6c6a7d}{FACULTY}}\ \ \ \ }
+\DoxyCodeLine{00024\ \}\ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{ConsumerType}};}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_consumer}{Consumer}}\ \{}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_ae2e1b70beff2515889a0886612928785}{uid}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_a847bfbdb7b3711858e07ff39c36587f7}{name}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{ConsumerType}}\ \mbox{\hyperlink{struct_consumer_aa85960a7fe181e714b914baacd96d34d}{type}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_consumer}{Consumer}}\ *\mbox{\hyperlink{struct_consumer_af323ee0c559d570bd8a37b9b0b249198}{next}};\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_consumer}{Consumer}}\ *\mbox{\hyperlink{struct_consumer_ad101608b826602312b7a0d296e86cfde}{prev}};\ \ \ \ \ }
+\DoxyCodeLine{00039\ \}\ \mbox{\hyperlink{struct_consumer}{Consumer}};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00052\ \mbox{\hyperlink{struct_consumer}{Consumer}}*\ \mbox{\hyperlink{consumer_8h_a9ec1b16fc84400f2f7e32e5f2feb5199}{createConsumer}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_ae2e1b70beff2515889a0886612928785}{uid}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_a847bfbdb7b3711858e07ff39c36587f7}{name}},\ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{ConsumerType}}\ \mbox{\hyperlink{struct_consumer_aa85960a7fe181e714b914baacd96d34d}{type}});}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{consumer_8h_ad38e99ed1eb60e95e2ba5e2c4d072499}{addConsumer}}(\mbox{\hyperlink{struct_consumer}{Consumer}}\ **head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_ae2e1b70beff2515889a0886612928785}{uid}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_a847bfbdb7b3711858e07ff39c36587f7}{name}},\ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{ConsumerType}}\ \mbox{\hyperlink{struct_consumer_aa85960a7fe181e714b914baacd96d34d}{type}});}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00075\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{consumer_8h_ac218a5353fd862f75a6b06caae330eae}{displayConsumers}}(\mbox{\hyperlink{struct_consumer}{Consumer}}\ *head);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{consumer_8h_a3019b3ce6db01ef1b2ac6d3252d84437}{editConsumer}}(\mbox{\hyperlink{struct_consumer}{Consumer}}\ *head,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_consumer_ae2e1b70beff2515889a0886612928785}{uid}},\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *newName,\ \mbox{\hyperlink{consumer_8h_a25c7d8425e158da61b9aa8f5db3a4a43}{ConsumerType}}\ newType);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00096\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{consumer_8h_a90cc83162635e632455656251d8c5b3d}{freeConsumers}}(\mbox{\hyperlink{struct_consumer}{Consumer}}\ *head);}
+\DoxyCodeLine{00097\ }
+\DoxyCodeLine{00098\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ CONSUMER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

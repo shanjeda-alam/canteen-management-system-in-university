@@ -1,0 +1,45 @@
+\doxysection{Order\+Stack\+Node Struct Reference}
+\hypertarget{struct_order_stack_node}{}\label{struct_order_stack_node}\index{OrderStackNode@{OrderStackNode}}
+
+
+Node of the undo stack.  
+
+
+
+
+{\ttfamily \#include $<$undo.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_stack_node_ad140de379fd6991a3c7d94ec0172926c}{order}}
+\item 
+struct \mbox{\hyperlink{struct_order_stack_node}{Order\+Stack\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_stack_node_ae6da18f6fac97c7dc0c8567a054a8ea9}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Node of the undo stack. 
+
+Each node stores a pointer to an order and links to the next node in the stack. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_order_stack_node_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_order_stack_node_ae6da18f6fac97c7dc0c8567a054a8ea9}\index{OrderStackNode@{OrderStackNode}!next@{next}}
+\index{next@{next}!OrderStackNode@{OrderStackNode}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{struct_order_stack_node_ae6da18f6fac97c7dc0c8567a054a8ea9} 
+struct \mbox{\hyperlink{struct_order_stack_node}{Order\+Stack\+Node}}\texorpdfstring{$\ast$}{*} Order\+Stack\+Node\+::next}
+
+Pointer to the next stack node \Hypertarget{struct_order_stack_node_ad140de379fd6991a3c7d94ec0172926c}\index{OrderStackNode@{OrderStackNode}!order@{order}}
+\index{order@{order}!OrderStackNode@{OrderStackNode}}
+\doxysubsubsection{\texorpdfstring{order}{order}}
+{\footnotesize\ttfamily \label{struct_order_stack_node_ad140de379fd6991a3c7d94ec0172926c} 
+\mbox{\hyperlink{struct_order}{Order}}\texorpdfstring{$\ast$}{*} Order\+Stack\+Node\+::order}
+
+Pointer to the last placed order 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{undo_8h}{undo.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,18 @@
+# -------- Basic Info --------
+PROJECT_NAME           = "Canteen Management System"
+OUTPUT_DIRECTORY       = docs
+
+# -------- Input Files --------
+INPUT                  = .
+FILE_PATTERNS          = *.c *.h
+RECURSIVE              = YES
+
+# -------- HTML Output --------
+GENERATE_HTML          = YES
+
+# -------- PDF (LaTeX) Output --------
+GENERATE_LATEX         = YES
+
+# -------- Warnings --------
+QUIET                  = NO
+WARNINGS               = YES

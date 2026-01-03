@@ -1,0 +1,41 @@
+\doxysection{undo.\+h}
+\hypertarget{undo_8h_source}{}\label{undo_8h_source}\index{include/undo.h@{include/undo.h}}
+\mbox{\hyperlink{undo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ UNDO\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ UNDO\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{order_8h}{order.h}}"{}}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ Data\ Structures}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_order_stack_node}{OrderStackNode}}\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ \mbox{\hyperlink{struct_order}{Order}}\ *\mbox{\hyperlink{struct_order_stack_node_ad140de379fd6991a3c7d94ec0172926c}{order}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_order_stack_node}{OrderStackNode}}\ *\mbox{\hyperlink{struct_order_stack_node_ae6da18f6fac97c7dc0c8567a054a8ea9}{next}};\ \ }
+\DoxyCodeLine{00030\ \}\ \mbox{\hyperlink{struct_order_stack_node}{OrderStackNode}};}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00039\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{struct_order_stack_node}{OrderStackNode}}\ *\mbox{\hyperlink{struct_order_stack_a8aa09e7b97b8be38a7c91e7753ce7270}{top}};\ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_order_stack_a40fc157e71355cf9f4eb1985a5fb5f1a}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00042\ \}\ \mbox{\hyperlink{struct_order_stack}{OrderStack}};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ \ \ Function\ Declarations}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00053\ \mbox{\hyperlink{struct_order_stack}{OrderStack}}*\ \mbox{\hyperlink{undo_8h_ab1c7bde31ef594f4cc628c6d36ae6c83}{createOrderStack}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00063\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{undo_8h_a4d1496d06a689596f33680de435fcee7}{pushOrder}}(\mbox{\hyperlink{struct_order_stack}{OrderStack}}\ *stack,\ \mbox{\hyperlink{struct_order}{Order}}\ *order);}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00074\ \mbox{\hyperlink{struct_order}{Order}}*\ \mbox{\hyperlink{undo_8h_a4c96ff38aee678e106bcd3f0c5ab1cb2}{popOrder}}(\mbox{\hyperlink{struct_order_stack}{OrderStack}}\ *stack);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00087\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{undo_8h_a17625c10cec58d17061f98ecc6c819ce}{undoLastOrder}}(\mbox{\hyperlink{struct_order_stack}{OrderStack}}\ *stack,\ \mbox{\hyperlink{struct_order_queue}{OrderQueue}}\ *queue);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00097\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{undo_8h_a493658812d05573a67a702021dcf1318}{freeOrderStack}}(\mbox{\hyperlink{struct_order_stack}{OrderStack}}\ *stack);}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00099\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ UNDO\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

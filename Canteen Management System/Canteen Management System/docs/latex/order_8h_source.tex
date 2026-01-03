@@ -1,0 +1,77 @@
+\doxysection{order.\+h}
+\hypertarget{order_8h_source}{}\label{order_8h_source}\index{include/order.h@{include/order.h}}
+\mbox{\hyperlink{order_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ORDER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ORDER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menuitem_8h}{menuitem.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ \ \ Order\ Item\ (multiple\ items\ per\ order)}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00028\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_order_item}{OrderItem}}\ \{}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{struct_menu}{Menu}}\ *\mbox{\hyperlink{struct_order_item_af673471c44c7ac3de00fc2cdf2dd8ed5}{menuItem}};\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_order_item_a5aeb41fb2c4bb29d2dce2e18b4e696ad}{quantity}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_order_item}{OrderItem}}\ *\mbox{\hyperlink{struct_order_item_a790dd5907020fa942420cfd9827b5cd7}{next}};\ \ \ }
+\DoxyCodeLine{00032\ \}\ \mbox{\hyperlink{struct_order_item}{OrderItem}};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00035\ \textcolor{comment}{\ \ \ Order\ Node\ (Queue\ node)}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00045\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_order}{Order}}\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ uint16\_t\ \mbox{\hyperlink{struct_order_a3f5f823e027c7e045f6960a66524334e}{orderId}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_order_a9d45d76a233d199a527946b2a876daff}{consumerName}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{char}\ *\mbox{\hyperlink{struct_order_a2d5c65bdf2d29006b3ac1a4e5846ab36}{consumerUID}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00049\ \ \ \ \ \mbox{\hyperlink{struct_order_item}{OrderItem}}\ *\mbox{\hyperlink{struct_order_aee1149917110e90b12357543fabdad35}{items}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{struct_order_a6ddc3e3543ffae7530aeb4d9ee0048ef}{totalAmount}};\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ time\_t\ \mbox{\hyperlink{struct_order_a9ab6bfabe85626c34cd054d320007940}{orderTime}};\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_order}{Order}}\ *\mbox{\hyperlink{struct_order_af630b0441309050732b69d4dc82f3ff0}{next}};\ \ \ \ \ \ \ }
+\DoxyCodeLine{00053\ \}\ \mbox{\hyperlink{struct_order}{Order}};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00056\ \textcolor{comment}{\ \ \ Order\ Queue\ (FIFO)}}
+\DoxyCodeLine{00057\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00065\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00066\ \ \ \ \ \mbox{\hyperlink{struct_order}{Order}}\ *\mbox{\hyperlink{struct_order_queue_adacdae8dd1fbf63d6528a3d7de807fcf}{front}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \mbox{\hyperlink{struct_order}{Order}}\ *\mbox{\hyperlink{struct_order_queue_aefe230376d54b0aa72059450a1ca6b19}{rear}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_order_queue_a6f1ad2313e1ade1470a18424bf3cea58}{count}};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00069\ \}\ \mbox{\hyperlink{struct_order_queue}{OrderQueue}};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{comment}{/*\ ===============================}}
+\DoxyCodeLine{00072\ \textcolor{comment}{\ \ \ Function\ Declarations}}
+\DoxyCodeLine{00073\ \textcolor{comment}{\ \ \ ===============================\ */}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00080\ \mbox{\hyperlink{struct_order_queue}{OrderQueue}}*\ \mbox{\hyperlink{order_8h_afe00439b0adb30c1456403ee4779541d}{createOrderQueue}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00090\ \mbox{\hyperlink{struct_order_item}{OrderItem}}*\ \mbox{\hyperlink{order_8h_a71f61da12db7f7c3a485e237d86456a5}{createOrderItem}}(\mbox{\hyperlink{struct_menu}{Menu}}\ *menuItem,\ \textcolor{keywordtype}{int}\ quantity);}
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00107\ \mbox{\hyperlink{struct_order}{Order}}*\ \mbox{\hyperlink{order_8h_af7464a734d50fdf956b87ca14306a4f2}{enqueueOrder}}(\mbox{\hyperlink{struct_order_queue}{OrderQueue}}\ *queue,\ \textcolor{keywordtype}{int}\ orderId,}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *consumerName,}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *consumerUID,}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{struct_order_item}{OrderItem}}\ *items,}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ totalAmount);}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00120\ \mbox{\hyperlink{struct_order}{Order}}*\ \mbox{\hyperlink{order_8h_a773458f7a7d23a7a7d4b426d4d5f37a9}{dequeueOrder}}(\mbox{\hyperlink{struct_order_queue}{OrderQueue}}\ *queue);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00129\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order_8h_ad0ded7f7fcc82884ccbd824e523c3506}{restoreStockLevels}}(\mbox{\hyperlink{struct_order}{Order}}\ *order);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00138\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order_8h_ac31581aa36a48a90c16ae08ca9556ca9}{displayOrders}}(\mbox{\hyperlink{struct_order_queue}{OrderQueue}}\ *queue);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00145\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order_8h_ad0ed8edcb471540702c50870797a2a23}{printBill}}(\mbox{\hyperlink{struct_order}{Order}}\ *order);}
+\DoxyCodeLine{00146\ }
+\DoxyCodeLine{00152\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order_8h_a203205f63a75367af1df9fe78e46fad7}{freeOrderItems}}(\mbox{\hyperlink{struct_order_item}{OrderItem}}\ *items);}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00161\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order_8h_a6fa3bd0885332e0b4a4a4da15f82b2dd}{freeOrderQueue}}(\mbox{\hyperlink{struct_order_queue}{OrderQueue}}\ *queue);}
+\DoxyCodeLine{00162\ }
+\DoxyCodeLine{00168\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{order_8h_ab5bec762231c2226b0e3e77fe4d54706}{freeOrder}}(\mbox{\hyperlink{struct_order}{Order}}\ *order);}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ ORDER\_H\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

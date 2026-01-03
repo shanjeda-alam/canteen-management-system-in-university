@@ -1,0 +1,45 @@
+\doxysection{Order\+Stack Struct Reference}
+\hypertarget{struct_order_stack}{}\label{struct_order_stack}\index{OrderStack@{OrderStack}}
+
+
+Stack structure for undo operations.  
+
+
+
+
+{\ttfamily \#include $<$undo.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_order_stack_node}{Order\+Stack\+Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_stack_a8aa09e7b97b8be38a7c91e7753ce7270}{top}}
+\item 
+int \mbox{\hyperlink{struct_order_stack_a40fc157e71355cf9f4eb1985a5fb5f1a}{count}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stack structure for undo operations. 
+
+Implements a LIFO (Last-\/\+In, First-\/\+Out) stack to track recently placed orders. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_order_stack_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_order_stack_a40fc157e71355cf9f4eb1985a5fb5f1a}\index{OrderStack@{OrderStack}!count@{count}}
+\index{count@{count}!OrderStack@{OrderStack}}
+\doxysubsubsection{\texorpdfstring{count}{count}}
+{\footnotesize\ttfamily \label{struct_order_stack_a40fc157e71355cf9f4eb1985a5fb5f1a} 
+int Order\+Stack\+::count}
+
+Number of orders in the stack \Hypertarget{struct_order_stack_a8aa09e7b97b8be38a7c91e7753ce7270}\index{OrderStack@{OrderStack}!top@{top}}
+\index{top@{top}!OrderStack@{OrderStack}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily \label{struct_order_stack_a8aa09e7b97b8be38a7c91e7753ce7270} 
+\mbox{\hyperlink{struct_order_stack_node}{Order\+Stack\+Node}}\texorpdfstring{$\ast$}{*} Order\+Stack\+::top}
+
+Pointer to the top of the stack 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{undo_8h}{undo.\+h}}\end{DoxyCompactItemize}

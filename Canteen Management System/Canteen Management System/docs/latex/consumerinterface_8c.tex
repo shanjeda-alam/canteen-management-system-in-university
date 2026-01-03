@@ -1,0 +1,49 @@
+\doxysection{consumerinterface.\+c File Reference}
+\hypertarget{consumerinterface_8c}{}\label{consumerinterface_8c}\index{consumerinterface.c@{consumerinterface.c}}
+
+
+\doxylink{struct_consumer}{Consumer} interface module for the Canteen Management System.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include "{}include/menuitem.\+h"{}}\newline
+{\ttfamily \#include "{}include/consumer.\+h"{}}\newline
+{\ttfamily \#include "{}include/order.\+h"{}}\newline
+{\ttfamily \#include "{}include/undo.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{consumerinterface_8c_a0bd773e1e33dbd4f11e5b8550196eff0}\label{consumerinterface_8c_a0bd773e1e33dbd4f11e5b8550196eff0} 
+\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*} {\bfseries get\+Or\+Create\+Consumer} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}uid, const char \texorpdfstring{$\ast$}{*}name)
+\item 
+\Hypertarget{consumerinterface_8c_af220d50e352583520075f3e7167aa577}\label{consumerinterface_8c_af220d50e352583520075f3e7167aa577} 
+void {\bfseries place\+Order} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}c, \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu\+Head, \mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue, \mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack, int \texorpdfstring{$\ast$}{*}next\+Order\+Id)
+\item 
+\Hypertarget{consumerinterface_8c_aa36892e526f566bdcd9844bee1eed854}\label{consumerinterface_8c_aa36892e526f566bdcd9844bee1eed854} 
+void {\bfseries cancel\+Last\+Order} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}c, \mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack, \mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\item 
+\Hypertarget{consumerinterface_8c_a4006b3b2e3509f9e93c4158261aee940}\label{consumerinterface_8c_a4006b3b2e3509f9e93c4158261aee940} 
+void {\bfseries view\+Consumer\+Orders} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}c, \mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\item 
+\Hypertarget{consumerinterface_8c_a7e944c5636319554e8d4c1842b97d52c}\label{consumerinterface_8c_a7e944c5636319554e8d4c1842b97d52c} 
+void {\bfseries consumer\+Interface} (\mbox{\hyperlink{struct_consumer}{Consumer}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}consumer\+Head, \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu\+Head, \mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue, \mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack, int \texorpdfstring{$\ast$}{*}next\+Order\+Id)
+\item 
+\Hypertarget{consumerinterface_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{consumerinterface_8c_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int {\bfseries main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_consumer}{Consumer} interface module for the Canteen Management System. 
+
+This file provides a standalone consumer-\/side interface where users can\+:
+\begin{DoxyItemize}
+\item View menu items
+\item Place orders
+\item Cancel last order
+\item View past orders
+\end{DoxyItemize}
+
+This module works with shared data structures such as \doxylink{struct_menu}{Menu}, \doxylink{struct_consumer}{Consumer}, \doxylink{struct_order_queue}{Order\+Queue}, and \doxylink{struct_order_stack}{Order\+Stack}. 

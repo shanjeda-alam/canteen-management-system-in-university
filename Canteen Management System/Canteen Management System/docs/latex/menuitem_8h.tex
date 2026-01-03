@@ -1,0 +1,243 @@
+\doxysection{include/menuitem.h File Reference}
+\hypertarget{menuitem_8h}{}\label{menuitem_8h}\index{include/menuitem.h@{include/menuitem.h}}
+
+
+\doxylink{struct_menu}{Menu} item management using a doubly linked list.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_menu}{Menu}}
+\begin{DoxyCompactList}\small\item\em Represents a menu item in a doubly linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{menuitem_8h_af98f6d34df563bac610654dc02c57fa7}\label{menuitem_8h_af98f6d34df563bac610654dc02c57fa7} 
+typedef struct Menu {\bfseries Menu}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}} \{ \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66babaad2be1abe0cffbc3a0bbf032a604c4}{FOOD}}
+, \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66ba5e57ca764a26bb8b8a9126551a4ec847}{DRINK}}
+, \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66ba0ca6a521202910292a69e7aa7cec009a}{DESERT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Represents the category of a menu item. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menuitem_8h_a77369dfb499950311f15f429fba6af6a}{create\+Menu\+Item}} (int id, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}} type, float price, uint16\+\_\+t quantity)
+\begin{DoxyCompactList}\small\item\em Creates a new menu item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menuitem_8h_a843835393327026a37de3071c9cc5d29}{add\+Menu\+Item}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}name, \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}} type, float price, uint16\+\_\+t quantity)
+\begin{DoxyCompactList}\small\item\em Adds a menu item to the menu list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{menuitem_8h_a207afe0692ab3d12e08fa6a418d947da}{find\+Menu\+Item}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}head, int id)
+\begin{DoxyCompactList}\small\item\em Finds a menu item by ID. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menuitem_8h_a1dbd16370337fa8806c3efac1d0893e7}{display\+Menu}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Displays all menu items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menuitem_8h_a0c932a669b40f9042433a438da39da44}{edit\+Menu\+Item}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}head, int id, const char \texorpdfstring{$\ast$}{*}new\+Name, \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}} new\+Type, float new\+Price)
+\begin{DoxyCompactList}\small\item\em Edits an existing menu item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menuitem_8h_adaf523c6af4257346fbcdee8f82c470c}{update\+Quantity}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}head, int id, int change)
+\begin{DoxyCompactList}\small\item\em Updates the stock quantity of a menu item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menuitem_8h_a9f8a5da263d96b323c00d70a0edcbd09}{free\+Menu}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Frees all menu items. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_menu}{Menu} item management using a doubly linked list. 
+
+This header file defines the \doxylink{struct_menu}{Menu} structure, item types, and function prototypes for creating, managing, displaying, modifying, and freeing menu items. 
+
+\label{doc-enum-members}
+\Hypertarget{menuitem_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{menuitem_8h_a443f647757dde85043b49343f5cbe66b}\index{menuitem.h@{menuitem.h}!ItemType@{ItemType}}
+\index{ItemType@{ItemType}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{ItemType}{ItemType}}
+{\footnotesize\ttfamily \label{menuitem_8h_a443f647757dde85043b49343f5cbe66b} 
+enum \mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}}}
+
+
+
+Represents the category of a menu item. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FOOD@{FOOD}!menuitem.h@{menuitem.h}}\index{menuitem.h@{menuitem.h}!FOOD@{FOOD}}}\Hypertarget{menuitem_8h_a443f647757dde85043b49343f5cbe66babaad2be1abe0cffbc3a0bbf032a604c4}\label{menuitem_8h_a443f647757dde85043b49343f5cbe66babaad2be1abe0cffbc3a0bbf032a604c4} 
+FOOD&Food item \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DRINK@{DRINK}!menuitem.h@{menuitem.h}}\index{menuitem.h@{menuitem.h}!DRINK@{DRINK}}}\Hypertarget{menuitem_8h_a443f647757dde85043b49343f5cbe66ba5e57ca764a26bb8b8a9126551a4ec847}\label{menuitem_8h_a443f647757dde85043b49343f5cbe66ba5e57ca764a26bb8b8a9126551a4ec847} 
+DRINK&Drink item \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DESERT@{DESERT}!menuitem.h@{menuitem.h}}\index{menuitem.h@{menuitem.h}!DESERT@{DESERT}}}\Hypertarget{menuitem_8h_a443f647757dde85043b49343f5cbe66ba0ca6a521202910292a69e7aa7cec009a}\label{menuitem_8h_a443f647757dde85043b49343f5cbe66ba0ca6a521202910292a69e7aa7cec009a} 
+DESERT&Dessert item \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{menuitem_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{menuitem_8h_a843835393327026a37de3071c9cc5d29}\index{menuitem.h@{menuitem.h}!addMenuItem@{addMenuItem}}
+\index{addMenuItem@{addMenuItem}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{addMenuItem()}{addMenuItem()}}
+{\footnotesize\ttfamily \label{menuitem_8h_a843835393327026a37de3071c9cc5d29} 
+void add\+Menu\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}}}]{type}{, }\item[{float}]{price}{, }\item[{uint16\+\_\+t}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Adds a menu item to the menu list. 
+
+Inserts the new item at the end of the doubly linked list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head pointer of the menu list. \\
+\hline
+{\em id} & Unique menu item ID. \\
+\hline
+{\em name} & Name of the menu item. \\
+\hline
+{\em type} & Category/type of the menu item. \\
+\hline
+{\em price} & Price of the menu item. \\
+\hline
+{\em quantity} & Initial stock quantity. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menuitem_8h_a77369dfb499950311f15f429fba6af6a}\index{menuitem.h@{menuitem.h}!createMenuItem@{createMenuItem}}
+\index{createMenuItem@{createMenuItem}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{createMenuItem()}{createMenuItem()}}
+{\footnotesize\ttfamily \label{menuitem_8h_a77369dfb499950311f15f429fba6af6a} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} create\+Menu\+Item (\begin{DoxyParamCaption}\item[{int}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{\mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}}}]{type}{, }\item[{float}]{price}{, }\item[{uint16\+\_\+t}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new menu item. 
+
+Allocates memory and initializes a \doxylink{struct_menu}{Menu} structure with the provided data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & Unique menu item ID. \\
+\hline
+{\em name} & Name of the menu item. \\
+\hline
+{\em type} & Category/type of the menu item. \\
+\hline
+{\em price} & Price of the menu item. \\
+\hline
+{\em quantity} & Initial stock quantity.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{struct_menu}{Menu} item, or NULL on failure. 
+\end{DoxyReturn}
+\Hypertarget{menuitem_8h_a1dbd16370337fa8806c3efac1d0893e7}\index{menuitem.h@{menuitem.h}!displayMenu@{displayMenu}}
+\index{displayMenu@{displayMenu}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{displayMenu()}{displayMenu()}}
+{\footnotesize\ttfamily \label{menuitem_8h_a1dbd16370337fa8806c3efac1d0893e7} 
+void display\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Displays all menu items. 
+
+Prints menu item details including ID, name, type, price, and available quantity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the menu list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menuitem_8h_a0c932a669b40f9042433a438da39da44}\index{menuitem.h@{menuitem.h}!editMenuItem@{editMenuItem}}
+\index{editMenuItem@{editMenuItem}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{editMenuItem()}{editMenuItem()}}
+{\footnotesize\ttfamily \label{menuitem_8h_a0c932a669b40f9042433a438da39da44} 
+void edit\+Menu\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int}]{id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{new\+Name}{, }\item[{\mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}}}]{new\+Type}{, }\item[{float}]{new\+Price}{}\end{DoxyParamCaption})}
+
+
+
+Edits an existing menu item. 
+
+Updates the name, type, and price of the specified menu item.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the menu list. \\
+\hline
+{\em id} & ID of the menu item to be edited. \\
+\hline
+{\em new\+Name} & New name of the menu item. \\
+\hline
+{\em new\+Type} & New category/type of the menu item. \\
+\hline
+{\em new\+Price} & New price of the menu item. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menuitem_8h_a207afe0692ab3d12e08fa6a418d947da}\index{menuitem.h@{menuitem.h}!findMenuItem@{findMenuItem}}
+\index{findMenuItem@{findMenuItem}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{findMenuItem()}{findMenuItem()}}
+{\footnotesize\ttfamily \label{menuitem_8h_a207afe0692ab3d12e08fa6a418d947da} 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} find\+Menu\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Finds a menu item by ID. 
+
+Searches the menu list for an item with the specified ID.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the menu list. \\
+\hline
+{\em id} & ID of the menu item to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the found \doxylink{struct_menu}{Menu} item, or NULL if not found. 
+\end{DoxyReturn}
+\Hypertarget{menuitem_8h_a9f8a5da263d96b323c00d70a0edcbd09}\index{menuitem.h@{menuitem.h}!freeMenu@{freeMenu}}
+\index{freeMenu@{freeMenu}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{freeMenu()}{freeMenu()}}
+{\footnotesize\ttfamily \label{menuitem_8h_a9f8a5da263d96b323c00d70a0edcbd09} 
+void free\+Menu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Frees all menu items. 
+
+Deallocates memory used by the menu list and its contents.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the menu list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{menuitem_8h_adaf523c6af4257346fbcdee8f82c470c}\index{menuitem.h@{menuitem.h}!updateQuantity@{updateQuantity}}
+\index{updateQuantity@{updateQuantity}!menuitem.h@{menuitem.h}}
+\doxysubsubsection{\texorpdfstring{updateQuantity()}{updateQuantity()}}
+{\footnotesize\ttfamily \label{menuitem_8h_adaf523c6af4257346fbcdee8f82c470c} 
+void update\+Quantity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{int}]{id}{, }\item[{int}]{change}{}\end{DoxyParamCaption})}
+
+
+
+Updates the stock quantity of a menu item. 
+
+Adjusts the quantity by a specified amount. Prevents negative stock values.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the menu list. \\
+\hline
+{\em id} & ID of the menu item. \\
+\hline
+{\em change} & Quantity change (positive or negative). \\
+\hline
+\end{DoxyParams}

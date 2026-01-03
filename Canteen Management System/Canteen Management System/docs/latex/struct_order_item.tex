@@ -1,0 +1,53 @@
+\doxysection{Order\+Item Struct Reference}
+\hypertarget{struct_order_item}{}\label{struct_order_item}\index{OrderItem@{OrderItem}}
+
+
+Represents a single item within an order.  
+
+
+
+
+{\ttfamily \#include $<$order.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_item_af673471c44c7ac3de00fc2cdf2dd8ed5}{menu\+Item}}
+\item 
+int \mbox{\hyperlink{struct_order_item_a5aeb41fb2c4bb29d2dce2e18b4e696ad}{quantity}}
+\item 
+struct \mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_order_item_a790dd5907020fa942420cfd9827b5cd7}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a single item within an order. 
+
+Each \doxylink{struct_order_item}{Order\+Item} stores a reference to a menu item and the quantity ordered. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_order_item_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_order_item_af673471c44c7ac3de00fc2cdf2dd8ed5}\index{OrderItem@{OrderItem}!menuItem@{menuItem}}
+\index{menuItem@{menuItem}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{menuItem}{menuItem}}
+{\footnotesize\ttfamily \label{struct_order_item_af673471c44c7ac3de00fc2cdf2dd8ed5} 
+\mbox{\hyperlink{struct_menu}{Menu}}\texorpdfstring{$\ast$}{*} Order\+Item\+::menu\+Item}
+
+Pointer to the menu item \Hypertarget{struct_order_item_a790dd5907020fa942420cfd9827b5cd7}\index{OrderItem@{OrderItem}!next@{next}}
+\index{next@{next}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{struct_order_item_a790dd5907020fa942420cfd9827b5cd7} 
+struct \mbox{\hyperlink{struct_order_item}{Order\+Item}}\texorpdfstring{$\ast$}{*} Order\+Item\+::next}
+
+Pointer to the next order item \Hypertarget{struct_order_item_a5aeb41fb2c4bb29d2dce2e18b4e696ad}\index{OrderItem@{OrderItem}!quantity@{quantity}}
+\index{quantity@{quantity}!OrderItem@{OrderItem}}
+\doxysubsubsection{\texorpdfstring{quantity}{quantity}}
+{\footnotesize\ttfamily \label{struct_order_item_a5aeb41fb2c4bb29d2dce2e18b4e696ad} 
+int Order\+Item\+::quantity}
+
+Quantity ordered 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{order_8h}{order.\+h}}\end{DoxyCompactItemize}

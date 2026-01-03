@@ -1,0 +1,135 @@
+\doxysection{include/undo.h File Reference}
+\hypertarget{undo_8h}{}\label{undo_8h}\index{include/undo.h@{include/undo.h}}
+
+
+Stack-\/based undo system for orders.  
+
+
+{\ttfamily \#include "{}order.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_order_stack_node}{Order\+Stack\+Node}}
+\begin{DoxyCompactList}\small\item\em Node of the undo stack. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_order_stack}{Order\+Stack}}
+\begin{DoxyCompactList}\small\item\em Stack structure for undo operations. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{undo_8h_aef2842d3e9f304b0da471ab4d60a4c72}\label{undo_8h_aef2842d3e9f304b0da471ab4d60a4c72} 
+typedef struct Order\+Stack\+Node {\bfseries Order\+Stack\+Node}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{undo_8h_ab1c7bde31ef594f4cc628c6d36ae6c83}{create\+Order\+Stack}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty order stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{undo_8h_a4d1496d06a689596f33680de435fcee7}{push\+Order}} (\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack, \mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}order)
+\begin{DoxyCompactList}\small\item\em Pushes an order onto the undo stack. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{undo_8h_a4c96ff38aee678e106bcd3f0c5ab1cb2}{pop\+Order}} (\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Pops the most recent order from the stack. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{undo_8h_a17625c10cec58d17061f98ecc6c819ce}{undo\+Last\+Order}} (\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack, \mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Undoes the most recently placed order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{undo_8h_a493658812d05573a67a702021dcf1318}{free\+Order\+Stack}} (\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}stack)
+\begin{DoxyCompactList}\small\item\em Frees the undo stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Stack-\/based undo system for orders. 
+
+This header file defines data structures and function prototypes for implementing an undo feature using a stack. It allows the most recently placed order to be undone, removed from the order queue, and its stock restored. 
+
+\label{doc-func-members}
+\Hypertarget{undo_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{undo_8h_ab1c7bde31ef594f4cc628c6d36ae6c83}\index{undo.h@{undo.h}!createOrderStack@{createOrderStack}}
+\index{createOrderStack@{createOrderStack}!undo.h@{undo.h}}
+\doxysubsubsection{\texorpdfstring{createOrderStack()}{createOrderStack()}}
+{\footnotesize\ttfamily \label{undo_8h_ab1c7bde31ef594f4cc628c6d36ae6c83} 
+\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*} create\+Order\+Stack (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty order stack. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{struct_order_stack}{Order\+Stack}. 
+\end{DoxyReturn}
+\Hypertarget{undo_8h_a493658812d05573a67a702021dcf1318}\index{undo.h@{undo.h}!freeOrderStack@{freeOrderStack}}
+\index{freeOrderStack@{freeOrderStack}!undo.h@{undo.h}}
+\doxysubsubsection{\texorpdfstring{freeOrderStack()}{freeOrderStack()}}
+{\footnotesize\ttfamily \label{undo_8h_a493658812d05573a67a702021dcf1318} 
+void free\+Order\+Stack (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Frees the undo stack. 
+
+Deallocates all stack nodes and the stack itself. Orders are not freed here, as they are managed by the order queue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the undo stack. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{undo_8h_a4c96ff38aee678e106bcd3f0c5ab1cb2}\index{undo.h@{undo.h}!popOrder@{popOrder}}
+\index{popOrder@{popOrder}!undo.h@{undo.h}}
+\doxysubsubsection{\texorpdfstring{popOrder()}{popOrder()}}
+{\footnotesize\ttfamily \label{undo_8h_a4c96ff38aee678e106bcd3f0c5ab1cb2} 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} pop\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{}\end{DoxyParamCaption})}
+
+
+
+Pops the most recent order from the stack. 
+
+Removes and returns the top order without freeing it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the undo stack.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the popped order, or NULL if the stack is empty. 
+\end{DoxyReturn}
+\Hypertarget{undo_8h_a4d1496d06a689596f33680de435fcee7}\index{undo.h@{undo.h}!pushOrder@{pushOrder}}
+\index{pushOrder@{pushOrder}!undo.h@{undo.h}}
+\doxysubsubsection{\texorpdfstring{pushOrder()}{pushOrder()}}
+{\footnotesize\ttfamily \label{undo_8h_a4d1496d06a689596f33680de435fcee7} 
+void push\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{, }\item[{\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Pushes an order onto the undo stack. 
+
+Stores the order so it can be undone later.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the undo stack. \\
+\hline
+{\em order} & Pointer to the order to be pushed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{undo_8h_a17625c10cec58d17061f98ecc6c819ce}\index{undo.h@{undo.h}!undoLastOrder@{undoLastOrder}}
+\index{undoLastOrder@{undoLastOrder}!undo.h@{undo.h}}
+\doxysubsubsection{\texorpdfstring{undoLastOrder()}{undoLastOrder()}}
+{\footnotesize\ttfamily \label{undo_8h_a17625c10cec58d17061f98ecc6c819ce} 
+int undo\+Last\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_stack}{Order\+Stack}} \texorpdfstring{$\ast$}{*}}]{stack}{, }\item[{\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Undoes the most recently placed order. 
+
+Restores stock levels, removes the order from the order queue, and frees the order memory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em stack} & Pointer to the undo stack. \\
+\hline
+{\em queue} & Pointer to the order queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, -\/1 on failure. 
+\end{DoxyReturn}

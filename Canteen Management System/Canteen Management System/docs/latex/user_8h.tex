@@ -1,0 +1,237 @@
+\doxysection{include/user.h File Reference}
+\hypertarget{user_8h}{}\label{user_8h}\index{include/user.h@{include/user.h}}
+
+
+\doxylink{struct_user}{User} management and authentication.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_user}{User}}
+\begin{DoxyCompactList}\small\item\em Represents a system user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{user_8h_aebb0f8a8bd00b8afba0e5abcf5b559c7}\label{user_8h_aebb0f8a8bd00b8afba0e5abcf5b559c7} 
+typedef struct User {\bfseries User}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}} \{ \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a3228e792244f936584abc6e3d7542d2c}{ADMIN}}
+, \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a966591b4b4e1813c66e94b115877dc3d}{MANAGER}}
+, \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951aac87e50c9deed5af3966a133a65ea6ef}{CASHIER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Defines user roles in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{user_8h_aee64e8e924e46b9138e54845f58927ed}{create\+User}} (const char \texorpdfstring{$\ast$}{*}uid, const char \texorpdfstring{$\ast$}{*}name, const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password, \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}} role)
+\begin{DoxyCompactList}\small\item\em Creates a new user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_8h_ac07bf75f0de0b9cb6d72c7b309b90d44}{add\+User}} (\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}head, \mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}user)
+\begin{DoxyCompactList}\small\item\em Adds a user to the user list. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{user_8h_a5a1a54e9a1171aab72b36538782f9d77}{find\+User\+By\+Username}} (\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}username)
+\begin{DoxyCompactList}\small\item\em Finds a user by username. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{user_8h_ab96e69bf7665bb7a8b904eadc37ae7a4}{login}} (\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}username, const char \texorpdfstring{$\ast$}{*}password)
+\begin{DoxyCompactList}\small\item\em Authenticates a user login. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_8h_a486adc3c36e999826ef3c0e109e40da9}{display\+Users}} (\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Displays all registered users. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_8h_a63185a69424790692aa6830a221d676b}{edit\+User}} (\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}head, const char \texorpdfstring{$\ast$}{*}uid, const char \texorpdfstring{$\ast$}{*}new\+Name, const char \texorpdfstring{$\ast$}{*}new\+Username, const char \texorpdfstring{$\ast$}{*}new\+Password, \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}} new\+Role)
+\begin{DoxyCompactList}\small\item\em Edits an existing user\textquotesingle{}s details. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{user_8h_ad1be486db5d66460e486117a29dd27e5}{free\+Users}} (\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}head)
+\begin{DoxyCompactList}\small\item\em Frees all users. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_user}{User} management and authentication. 
+
+This header file defines user roles, user data structures, and function prototypes for creating, managing, authenticating, displaying, editing, and freeing users stored in a linked list. 
+
+\label{doc-enum-members}
+\Hypertarget{user_8h_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}\index{user.h@{user.h}!Role@{Role}}
+\index{Role@{Role}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{Role}{Role}}
+{\footnotesize\ttfamily \label{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951} 
+enum \mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}}}
+
+
+
+Defines user roles in the system. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADMIN@{ADMIN}!user.h@{user.h}}\index{user.h@{user.h}!ADMIN@{ADMIN}}}\Hypertarget{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a3228e792244f936584abc6e3d7542d2c}\label{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a3228e792244f936584abc6e3d7542d2c} 
+ADMIN&Administrator with full access \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MANAGER@{MANAGER}!user.h@{user.h}}\index{user.h@{user.h}!MANAGER@{MANAGER}}}\Hypertarget{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a966591b4b4e1813c66e94b115877dc3d}\label{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951a966591b4b4e1813c66e94b115877dc3d} 
+MANAGER&Manager with operational access \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CASHIER@{CASHIER}!user.h@{user.h}}\index{user.h@{user.h}!CASHIER@{CASHIER}}}\Hypertarget{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951aac87e50c9deed5af3966a133a65ea6ef}\label{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951aac87e50c9deed5af3966a133a65ea6ef} 
+CASHIER&Cashier with limited access \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{doc-func-members}
+\Hypertarget{user_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{user_8h_ac07bf75f0de0b9cb6d72c7b309b90d44}\index{user.h@{user.h}!addUser@{addUser}}
+\index{addUser@{addUser}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{addUser()}{addUser()}}
+{\footnotesize\ttfamily \label{user_8h_ac07bf75f0de0b9cb6d72c7b309b90d44} 
+void add\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{head}{, }\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Adds a user to the user list. 
+
+Inserts the user at the head of the linked list.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head pointer of the user list. \\
+\hline
+{\em user} & Pointer to the user to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_8h_aee64e8e924e46b9138e54845f58927ed}\index{user.h@{user.h}!createUser@{createUser}}
+\index{createUser@{createUser}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{createUser()}{createUser()}}
+{\footnotesize\ttfamily \label{user_8h_aee64e8e924e46b9138e54845f58927ed} 
+\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} create\+User (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{uid}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{username}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{password}{, }\item[{\mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}}}]{role}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new user. 
+
+Allocates memory and initializes a \doxylink{struct_user}{User} structure with the provided details.
+
+
+\begin{DoxyParams}{Parameters}
+{\em uid} & Unique user ID. \\
+\hline
+{\em name} & Full name of the user. \\
+\hline
+{\em username} & Login username. \\
+\hline
+{\em password} & Login password. \\
+\hline
+{\em role} & \doxylink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role} of the user.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{struct_user}{User}, or NULL on failure. 
+\end{DoxyReturn}
+\Hypertarget{user_8h_a486adc3c36e999826ef3c0e109e40da9}\index{user.h@{user.h}!displayUsers@{displayUsers}}
+\index{displayUsers@{displayUsers}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{displayUsers()}{displayUsers()}}
+{\footnotesize\ttfamily \label{user_8h_a486adc3c36e999826ef3c0e109e40da9} 
+void display\+Users (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Displays all registered users. 
+
+Prints user information including UID, name, username, and role.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the user list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_8h_a63185a69424790692aa6830a221d676b}\index{user.h@{user.h}!editUser@{editUser}}
+\index{editUser@{editUser}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{editUser()}{editUser()}}
+{\footnotesize\ttfamily \label{user_8h_a63185a69424790692aa6830a221d676b} 
+void edit\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{uid}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{new\+Name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{new\+Username}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{new\+Password}{, }\item[{\mbox{\hyperlink{user_8h_acdd79a1a4f81dd6ee5cddcb21149b951}{Role}}}]{new\+Role}{}\end{DoxyParamCaption})}
+
+
+
+Edits an existing user\textquotesingle{}s details. 
+
+Updates name, username, password, and role for the specified user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the user list. \\
+\hline
+{\em uid} & UID of the user to edit. \\
+\hline
+{\em new\+Name} & New name of the user. \\
+\hline
+{\em new\+Username} & New username. \\
+\hline
+{\em new\+Password} & New password. \\
+\hline
+{\em new\+Role} & New role. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_8h_a5a1a54e9a1171aab72b36538782f9d77}\index{user.h@{user.h}!findUserByUsername@{findUserByUsername}}
+\index{findUserByUsername@{findUserByUsername}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{findUserByUsername()}{findUserByUsername()}}
+{\footnotesize\ttfamily \label{user_8h_a5a1a54e9a1171aab72b36538782f9d77} 
+\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} find\+User\+By\+Username (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{username}{}\end{DoxyParamCaption})}
+
+
+
+Finds a user by username. 
+
+Searches the user list for a matching username.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the user list. \\
+\hline
+{\em username} & Username to search for.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the matching \doxylink{struct_user}{User}, or NULL if not found. 
+\end{DoxyReturn}
+\Hypertarget{user_8h_ad1be486db5d66460e486117a29dd27e5}\index{user.h@{user.h}!freeUsers@{freeUsers}}
+\index{freeUsers@{freeUsers}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{freeUsers()}{freeUsers()}}
+{\footnotesize\ttfamily \label{user_8h_ad1be486db5d66460e486117a29dd27e5} 
+void free\+Users (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{head}{}\end{DoxyParamCaption})}
+
+
+
+Frees all users. 
+
+Deallocates memory used by the user list and all associated user data.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the user list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{user_8h_ab96e69bf7665bb7a8b904eadc37ae7a4}\index{user.h@{user.h}!login@{login}}
+\index{login@{login}!user.h@{user.h}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{user_8h_ab96e69bf7665bb7a8b904eadc37ae7a4} 
+\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*} login (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_user}{User}} \texorpdfstring{$\ast$}{*}}]{head}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{username}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Authenticates a user login. 
+
+Verifies username and password credentials.
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & Pointer to the head of the user list. \\
+\hline
+{\em username} & Login username. \\
+\hline
+{\em password} & Login password.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the authenticated \doxylink{struct_user}{User}, or NULL on failure. 
+\end{DoxyReturn}

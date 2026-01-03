@@ -1,0 +1,238 @@
+\doxysection{include/order.h File Reference}
+\hypertarget{order_8h}{}\label{order_8h}\index{include/order.h@{include/order.h}}
+
+
+\doxylink{struct_order}{Order}, order item, and order queue management.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include "{}menuitem.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_order_item}{Order\+Item}}
+\begin{DoxyCompactList}\small\item\em Represents a single item within an order. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_order}{Order}}
+\begin{DoxyCompactList}\small\item\em Represents a customer order. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_order_queue}{Order\+Queue}}
+\begin{DoxyCompactList}\small\item\em FIFO queue for managing orders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{order_8h_af9b510fa0c322ffd2e24a9d1a04e4164}\label{order_8h_af9b510fa0c322ffd2e24a9d1a04e4164} 
+typedef struct Order\+Item {\bfseries Order\+Item}
+\item 
+\Hypertarget{order_8h_a72bb837d293ee0211430def860d98075}\label{order_8h_a72bb837d293ee0211430def860d98075} 
+typedef struct Order {\bfseries Order}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{order_8h_afe00439b0adb30c1456403ee4779541d}{create\+Order\+Queue}} (void)
+\begin{DoxyCompactList}\small\item\em Creates and initializes an empty order queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{order_8h_a71f61da12db7f7c3a485e237d86456a5}{create\+Order\+Item}} (\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}menu\+Item, int quantity)
+\begin{DoxyCompactList}\small\item\em Creates a new order item. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{order_8h_af7464a734d50fdf956b87ca14306a4f2}{enqueue\+Order}} (\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue, int order\+Id, const char \texorpdfstring{$\ast$}{*}consumer\+Name, const char \texorpdfstring{$\ast$}{*}consumer\+UID, \mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*}items, float total\+Amount)
+\begin{DoxyCompactList}\small\item\em Enqueues a new order into the order queue. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{order_8h_a773458f7a7d23a7a7d4b426d4d5f37a9}{dequeue\+Order}} (\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Dequeues an order from the front of the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{order_8h_ad0ded7f7fcc82884ccbd824e523c3506}{restore\+Stock\+Levels}} (\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}order)
+\begin{DoxyCompactList}\small\item\em Restores stock levels after undoing an order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{order_8h_ac31581aa36a48a90c16ae08ca9556ca9}{display\+Orders}} (\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Displays all orders in the queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{order_8h_ad0ed8edcb471540702c50870797a2a23}{print\+Bill}} (\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}order)
+\begin{DoxyCompactList}\small\item\em Prints a formatted bill for a specific order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{order_8h_a203205f63a75367af1df9fe78e46fad7}{free\+Order\+Items}} (\mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*}items)
+\begin{DoxyCompactList}\small\item\em Frees a linked list of order items. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{order_8h_a6fa3bd0885332e0b4a4a4da15f82b2dd}{free\+Order\+Queue}} (\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}queue)
+\begin{DoxyCompactList}\small\item\em Frees the entire order queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{order_8h_ab5bec762231c2226b0e3e77fe4d54706}{free\+Order}} (\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}order)
+\begin{DoxyCompactList}\small\item\em Frees a single order. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{struct_order}{Order}, order item, and order queue management. 
+
+This header file defines data structures and function declarations for handling customer orders using a FIFO queue. It supports multiple items per order, billing, undo support, and memory cleanup. 
+
+\label{doc-func-members}
+\Hypertarget{order_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{order_8h_a71f61da12db7f7c3a485e237d86456a5}\index{order.h@{order.h}!createOrderItem@{createOrderItem}}
+\index{createOrderItem@{createOrderItem}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{createOrderItem()}{createOrderItem()}}
+{\footnotesize\ttfamily \label{order_8h_a71f61da12db7f7c3a485e237d86456a5} 
+\mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*} create\+Order\+Item (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*}}]{menu\+Item}{, }\item[{int}]{quantity}{}\end{DoxyParamCaption})}
+
+
+
+Creates a new order item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em menu\+Item} & Pointer to the menu item. \\
+\hline
+{\em quantity} & Quantity ordered.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{struct_order_item}{Order\+Item}. 
+\end{DoxyReturn}
+\Hypertarget{order_8h_afe00439b0adb30c1456403ee4779541d}\index{order.h@{order.h}!createOrderQueue@{createOrderQueue}}
+\index{createOrderQueue@{createOrderQueue}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{createOrderQueue()}{createOrderQueue()}}
+{\footnotesize\ttfamily \label{order_8h_afe00439b0adb30c1456403ee4779541d} 
+\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*} create\+Order\+Queue (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Creates and initializes an empty order queue. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to the newly created \doxylink{struct_order_queue}{Order\+Queue}. 
+\end{DoxyReturn}
+\Hypertarget{order_8h_a773458f7a7d23a7a7d4b426d4d5f37a9}\index{order.h@{order.h}!dequeueOrder@{dequeueOrder}}
+\index{dequeueOrder@{dequeueOrder}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{dequeueOrder()}{dequeueOrder()}}
+{\footnotesize\ttfamily \label{order_8h_a773458f7a7d23a7a7d4b426d4d5f37a9} 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} dequeue\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Dequeues an order from the front of the queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the order queue.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the dequeued \doxylink{struct_order}{Order}, or NULL if queue is empty. 
+\end{DoxyReturn}
+\Hypertarget{order_8h_ac31581aa36a48a90c16ae08ca9556ca9}\index{order.h@{order.h}!displayOrders@{displayOrders}}
+\index{displayOrders@{displayOrders}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{displayOrders()}{displayOrders()}}
+{\footnotesize\ttfamily \label{order_8h_ac31581aa36a48a90c16ae08ca9556ca9} 
+void display\+Orders (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Displays all orders in the queue. 
+
+Prints detailed information including items and totals.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the order queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{order_8h_af7464a734d50fdf956b87ca14306a4f2}\index{order.h@{order.h}!enqueueOrder@{enqueueOrder}}
+\index{enqueueOrder@{enqueueOrder}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{enqueueOrder()}{enqueueOrder()}}
+{\footnotesize\ttfamily \label{order_8h_af7464a734d50fdf956b87ca14306a4f2} 
+\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*} enqueue\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{int}]{order\+Id}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{consumer\+Name}{, }\item[{const char \texorpdfstring{$\ast$}{*}}]{consumer\+UID}{, }\item[{\mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*}}]{items}{, }\item[{float}]{total\+Amount}{}\end{DoxyParamCaption})}
+
+
+
+Enqueues a new order into the order queue. 
+
+Adds an order to the rear of the queue and assigns the current timestamp.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the order queue. \\
+\hline
+{\em order\+Id} & Unique order ID. \\
+\hline
+{\em consumer\+Name} & Name of the consumer. \\
+\hline
+{\em consumer\+UID} & UID of the consumer. \\
+\hline
+{\em items} & Linked list of order items. \\
+\hline
+{\em total\+Amount} & Total order amount.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pointer to the created \doxylink{struct_order}{Order}. 
+\end{DoxyReturn}
+\Hypertarget{order_8h_ab5bec762231c2226b0e3e77fe4d54706}\index{order.h@{order.h}!freeOrder@{freeOrder}}
+\index{freeOrder@{freeOrder}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{freeOrder()}{freeOrder()}}
+{\footnotesize\ttfamily \label{order_8h_ab5bec762231c2226b0e3e77fe4d54706} 
+void free\+Order (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Frees a single order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Pointer to the order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{order_8h_a203205f63a75367af1df9fe78e46fad7}\index{order.h@{order.h}!freeOrderItems@{freeOrderItems}}
+\index{freeOrderItems@{freeOrderItems}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{freeOrderItems()}{freeOrderItems()}}
+{\footnotesize\ttfamily \label{order_8h_a203205f63a75367af1df9fe78e46fad7} 
+void free\+Order\+Items (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_item}{Order\+Item}} \texorpdfstring{$\ast$}{*}}]{items}{}\end{DoxyParamCaption})}
+
+
+
+Frees a linked list of order items. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em items} & Pointer to the head of the order item list. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{order_8h_a6fa3bd0885332e0b4a4a4da15f82b2dd}\index{order.h@{order.h}!freeOrderQueue@{freeOrderQueue}}
+\index{freeOrderQueue@{freeOrderQueue}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{freeOrderQueue()}{freeOrderQueue()}}
+{\footnotesize\ttfamily \label{order_8h_a6fa3bd0885332e0b4a4a4da15f82b2dd} 
+void free\+Order\+Queue (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order_queue}{Order\+Queue}} \texorpdfstring{$\ast$}{*}}]{queue}{}\end{DoxyParamCaption})}
+
+
+
+Frees the entire order queue. 
+
+Deallocates all orders, their items, and the queue itself.
+
+
+\begin{DoxyParams}{Parameters}
+{\em queue} & Pointer to the order queue. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{order_8h_ad0ed8edcb471540702c50870797a2a23}\index{order.h@{order.h}!printBill@{printBill}}
+\index{printBill@{printBill}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{printBill()}{printBill()}}
+{\footnotesize\ttfamily \label{order_8h_ad0ed8edcb471540702c50870797a2a23} 
+void print\+Bill (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Prints a formatted bill for a specific order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Pointer to the order. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{order_8h_ad0ded7f7fcc82884ccbd824e523c3506}\index{order.h@{order.h}!restoreStockLevels@{restoreStockLevels}}
+\index{restoreStockLevels@{restoreStockLevels}!order.h@{order.h}}
+\doxysubsubsection{\texorpdfstring{restoreStockLevels()}{restoreStockLevels()}}
+{\footnotesize\ttfamily \label{order_8h_ad0ded7f7fcc82884ccbd824e523c3506} 
+void restore\+Stock\+Levels (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_order}{Order}} \texorpdfstring{$\ast$}{*}}]{order}{}\end{DoxyParamCaption})}
+
+
+
+Restores stock levels after undoing an order. 
+
+Adds back the quantities of ordered items to the menu stock.
+
+
+\begin{DoxyParams}{Parameters}
+{\em order} & Pointer to the order. \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,85 @@
+\doxysection{Menu Struct Reference}
+\hypertarget{struct_menu}{}\label{struct_menu}\index{Menu@{Menu}}
+
+
+Represents a menu item in a doubly linked list.  
+
+
+
+
+{\ttfamily \#include $<$menuitem.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_menu_aac3b853a64aca7ef6e70fceae8c126be}{id}}
+\item 
+char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_menu_a0da441d69a6621777a2b755d61cf1dc4}{name}}
+\item 
+\mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}} \mbox{\hyperlink{struct_menu_a51304cedbcfe37c1da40ea36e9a257ed}{type}}
+\item 
+float \mbox{\hyperlink{struct_menu_a108d468ba088144d3767cc0538d69f64}{price}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{struct_menu_a26a1be315d55491a7766a57290080a5e}{quantity}}
+\item 
+struct \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_menu_ad3ae1b10375ce4cd3ead2b89b63d22b7}{prev}}
+\item 
+struct \mbox{\hyperlink{struct_menu}{Menu}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{struct_menu_a46a1863f7a559b9f39497f401a8a70ec}{next}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a menu item in a doubly linked list. 
+
+Each menu item contains identifying information, pricing, stock quantity, and pointers to adjacent items. 
+
+\label{doc-variable-members}
+\Hypertarget{struct_menu_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{struct_menu_aac3b853a64aca7ef6e70fceae8c126be}\index{Menu@{Menu}!id@{id}}
+\index{id@{id}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{id}{id}}
+{\footnotesize\ttfamily \label{struct_menu_aac3b853a64aca7ef6e70fceae8c126be} 
+int Menu\+::id}
+
+Unique menu item ID \Hypertarget{struct_menu_a0da441d69a6621777a2b755d61cf1dc4}\index{Menu@{Menu}!name@{name}}
+\index{name@{name}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily \label{struct_menu_a0da441d69a6621777a2b755d61cf1dc4} 
+char\texorpdfstring{$\ast$}{*} Menu\+::name}
+
+Name of the menu item \Hypertarget{struct_menu_a46a1863f7a559b9f39497f401a8a70ec}\index{Menu@{Menu}!next@{next}}
+\index{next@{next}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \label{struct_menu_a46a1863f7a559b9f39497f401a8a70ec} 
+struct \mbox{\hyperlink{struct_menu}{Menu}}\texorpdfstring{$\ast$}{*} Menu\+::next}
+
+Pointer to the next item \Hypertarget{struct_menu_ad3ae1b10375ce4cd3ead2b89b63d22b7}\index{Menu@{Menu}!prev@{prev}}
+\index{prev@{prev}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{prev}{prev}}
+{\footnotesize\ttfamily \label{struct_menu_ad3ae1b10375ce4cd3ead2b89b63d22b7} 
+struct \mbox{\hyperlink{struct_menu}{Menu}}\texorpdfstring{$\ast$}{*} Menu\+::prev}
+
+Pointer to the previous item \Hypertarget{struct_menu_a108d468ba088144d3767cc0538d69f64}\index{Menu@{Menu}!price@{price}}
+\index{price@{price}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{price}{price}}
+{\footnotesize\ttfamily \label{struct_menu_a108d468ba088144d3767cc0538d69f64} 
+float Menu\+::price}
+
+Price of the item \Hypertarget{struct_menu_a26a1be315d55491a7766a57290080a5e}\index{Menu@{Menu}!quantity@{quantity}}
+\index{quantity@{quantity}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{quantity}{quantity}}
+{\footnotesize\ttfamily \label{struct_menu_a26a1be315d55491a7766a57290080a5e} 
+uint16\+\_\+t Menu\+::quantity}
+
+Available stock quantity \Hypertarget{struct_menu_a51304cedbcfe37c1da40ea36e9a257ed}\index{Menu@{Menu}!type@{type}}
+\index{type@{type}!Menu@{Menu}}
+\doxysubsubsection{\texorpdfstring{type}{type}}
+{\footnotesize\ttfamily \label{struct_menu_a51304cedbcfe37c1da40ea36e9a257ed} 
+\mbox{\hyperlink{menuitem_8h_a443f647757dde85043b49343f5cbe66b}{Item\+Type}} Menu\+::type}
+
+Type/category of the item 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{menuitem_8h}{menuitem.\+h}}\end{DoxyCompactItemize}
